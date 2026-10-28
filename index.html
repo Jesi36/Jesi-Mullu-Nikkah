@@ -84,7 +84,7 @@ body.locked{overflow:hidden}
 .cover-inner > .corner{position:absolute;color:var(--gold);animation:fadeIn 1.2s 1.2s both}
 .cover-inner > .corner.bl{left:-6px;bottom:-6px}
 .cover-inner > .corner.br{right:-6px;bottom:-6px}
-.cover-inner .bismillah{color:var(--gold-hi);font-size:1.4rem}
+.cover-inner .bismillah{color:var(--gold-hi);font-size:1.15rem}
 .cover-inner .eyebrow{color:var(--gold-hi)}
 .foil{background:var(--foil);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;animation:shimmer 6s linear infinite}
 .cover-names{font-family:var(--script);font-weight:600;font-size:clamp(3rem,13vw,3.7rem);line-height:1.1;margin:2px 0}
@@ -134,10 +134,15 @@ body.locked{overflow:hidden}
 .frame{border:1px solid var(--gold);border-radius:228px 228px 10px 10px;padding:60px 22px 44px;position:relative}
 .frame::before{content:"";position:absolute;inset:5px;border:1px solid var(--line);border-radius:223px 223px 6px 6px;pointer-events:none}
 section{display:flex;flex-direction:column;align-items:center;text-align:center;gap:10px;padding-block:24px;position:relative}
-.bismillah{font-family:var(--arabic);font-size:1.6rem;color:var(--forest);line-height:1.8;direction:rtl}
+.bismillah{font-family:var(--arabic);font-size:1.25rem;color:var(--forest);line-height:1.8;direction:rtl}
 .eyebrow{font-family:var(--label);font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);font-weight:500}
 .names{font-family:var(--script);font-weight:600;color:var(--forest);font-size:clamp(2.4rem,10vw,2.9rem);line-height:1.15;margin:6px 0 0}
 .names .amp{display:block;font-family:var(--label);font-size:1.1rem;color:var(--gold);margin:6px 0}
+.couple{display:grid;gap:10px;justify-items:center;margin-top:4px}
+.person{display:grid;gap:4px;justify-items:center}
+.parents{font-style:italic;font-size:1.05rem;line-height:1.45;max-width:none}
+.amp-sep{font-family:var(--label);font-size:1.1rem}
+.frame,.frame .eyebrow,.frame .lede,.frame label,.frame .count span,.frame .cite,.frame footer,.frame .hint,.frame .parents,.frame .amp-sep{color:var(--forest)}
 h2{font-family:var(--serif);font-weight:500;font-size:1.9rem;line-height:1.2;color:var(--forest);margin:0;text-wrap:balance}
 p{margin:0;max-width:34ch}
 .lede{color:var(--muted);font-style:italic;font-size:1.1rem}
@@ -188,8 +193,8 @@ textarea{min-height:88px;resize:vertical}
 .hint.err{color:#8E3B2C}
 .thanks{display:grid;gap:6px;justify-items:center;padding:20px 10px;border:1px solid var(--gold);outline:1px solid var(--line);outline-offset:-6px;border-radius:6px;width:100%;background:var(--tint)}
 .thanks b{font-family:var(--script);font-weight:600;font-size:2.1rem;color:var(--forest);line-height:1.1}
-.ayah{font-family:var(--arabic);font-size:1.5rem;line-height:2;color:var(--forest);direction:rtl;max-width:24ch}
-.verse{font-family:var(--serif);font-size:1.25rem;color:var(--forest);font-style:italic;max-width:30ch;line-height:1.45}
+.ayah{font-family:var(--arabic);font-size:1.2rem;line-height:2;color:var(--forest);direction:rtl;max-width:24ch}
+.verse{font-family:var(--serif);font-size:1.05rem;color:var(--forest);font-style:italic;max-width:30ch;line-height:1.45}
 .cite{font-family:var(--label);font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
 footer{text-align:center;padding-top:20px;font-family:var(--label);font-size:.72rem;letter-spacing:.26em;text-transform:uppercase;color:var(--muted)}
 .reveal{animation:rise .9s ease-out both}
@@ -304,8 +309,17 @@ html{scroll-behavior:smooth}
     <svg class="sprig" aria-hidden="true"><use href="#sprig"/></svg>
     <div class="eyebrow">Nikkah &amp; Reception</div>
     <p class="lede">With joy and gratitude, we invite you to celebrate the marriage of</p>
-    <h2 class="names">Jaseel K M<span class="amp">&amp;</span>Najla Kozhikoden</h2>
-    <div class="eyebrow" style="margin-top:6px">Sunday · 29 November 2026</div>
+    <div class="couple">
+      <div class="person">
+        <h2 class="names">Jaseel K M</h2>
+        <p class="parents">S/o Abdul Gafoor &amp; Fathimakutty</p>
+      </div>
+      <div class="amp-sep">&amp;</div>
+      <div class="person">
+        <h2 class="names">Najla Kozhikoden</h2>
+        <p class="parents">D/o Mujeebu Rahiman &amp; Ummukulsu</p>
+      </div>
+    </div>
   </section>
 
   <div class="divider" aria-hidden="true"><svg><use href="#orn"/></svg></div>
@@ -316,7 +330,7 @@ html{scroll-behavior:smooth}
       <div class="eb-date">Sunday, 29 November 2026</div>
       <div class="eb-row">
         <div><span class="eyebrow">Nikkah</span><span class="when">10:00 AM</span></div>
-        <div><span class="eyebrow">Reception</span><span class="when">After Nikkah</span></div>
+        <div><span class="eyebrow">Reception</span><span class="when">Following Nikkah</span></div>
       </div>
       <div class="eb-venue"><span class="eyebrow">Venue</span><span class="what">Chaliyar Convention Center</span></div>
       <a class="btn" href="https://maps.app.goo.gl/UEYMFY2Rwa34xwAP9" target="_blank" rel="noopener">Get Directions</a>
@@ -333,33 +347,6 @@ html{scroll-behavior:smooth}
       <div><b id="m">--</b><span>Mins</span></div>
       <div><b id="s">--</b><span>Secs</span></div>
     </div>
-  </section>
-
-  <div class="divider" aria-hidden="true"><svg><use href="#orn"/></svg></div>
-
-  <section id="rsvp">
-    <div class="eyebrow">RSVP</div>
-    <h2>Will you attend?</h2>
-    <form id="rsvpForm" novalidate>
-      <div class="choices" role="radiogroup" aria-label="Attendance">
-        <label class="choice"><input type="radio" name="attend" id="attYes" value="Yes" checked><span>Joyfully attending<small>Yes, I'll be there</small></span></label>
-        <label class="choice"><input type="radio" name="attend" id="attNo" value="No"><span>Regretfully unable<small>No, I can't make it</small></span></label>
-      </div>
-      <label for="rName">Your name<input id="rName" type="text" autocomplete="name" placeholder="Full name"></label>
-      <label for="rGuests" id="guestsWrap">Number of guests
-        <select id="rGuests">
-          <option value="1">Just myself</option>
-          <option value="2">2 guests</option>
-          <option value="3">3 guests</option>
-          <option value="4">4 guests</option>
-          <option value="5+">5 or more</option>
-        </select>
-      </label>
-      <label for="rMsg">Message (optional)<textarea id="rMsg" placeholder="A note for the couple"></textarea></label>
-      <div class="form-actions"><button class="btn" id="rSend" type="submit">Send RSVP</button></div>
-      <p class="hint" id="rHint"></p>
-    </form>
-    <div class="thanks" id="rThanks" hidden><b>JazakAllah Khair!</b><p id="rThanksMsg">We can't wait to celebrate with you.</p></div>
   </section>
 
   <div class="divider" aria-hidden="true"><svg><use href="#orn"/></svg></div>
@@ -456,28 +443,6 @@ html{scroll-behavior:smooth}
     window.open("https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(waText), "_blank", "noopener");
     return Promise.resolve();
   }
-
-  function toggleGuests(){ $("guestsWrap").hidden = !$("attYes").checked; }
-  $("attYes").addEventListener("change", toggleGuests);
-  $("attNo").addEventListener("change", toggleGuests);
-
-  $("rsvpForm").addEventListener("submit", function(e){
-    e.preventDefault();
-    var name = $("rName").value.trim();
-    if (!name) { $("rHint").textContent = "Please add your name."; $("rHint").className = "hint err"; $("rName").focus(); return; }
-    var yes = $("attYes").checked;
-    var data = {type:"rsvp", name:name, attending: yes ? "Yes" : "No", guests: yes ? $("rGuests").value : "0", message:$("rMsg").value.trim()};
-    var wa = "RSVP – Jaseel & Najla's Nikkah (29 Nov)\nName: " + name + "\nAttending: " + (yes ? "Yes, InshaAllah\nGuests: " + data.guests : "Regretfully unable") + (data.message ? "\nMessage: " + data.message : "");
-    $("rSend").disabled = true; $("rSend").textContent = "Sending…"; $("rHint").textContent = "";
-    send(data, wa).then(function(){
-      $("rsvpForm").hidden = true;
-      $("rThanksMsg").textContent = yes ? "We can't wait to celebrate with you." : "Thank you for letting us know. You'll be in our duas.";
-      $("rThanks").hidden = false;
-    }).catch(function(){
-      $("rSend").disabled = false; $("rSend").textContent = "Send RSVP";
-      $("rHint").textContent = "That didn't go through. Check your connection and try again."; $("rHint").className = "hint err";
-    });
-  });
 
   $("wishForm").addEventListener("submit", function(e){
     e.preventDefault();
